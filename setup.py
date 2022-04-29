@@ -10,8 +10,7 @@ from setuptools import find_namespace_packages, setup
 
 # Setup and get version information.
 THIS_DIR = os.path.realpath(os.path.dirname(__file__))
-IREESRC_DIR = os.path.join(THIS_DIR, "..", "..")
-VERSION_INFO_FILE = os.path.join(IREESRC_DIR, "version_info.json")
+VERSION_INFO_FILE = os.path.join(THIS_DIR, "version_info.json")
 
 
 def load_version_info():
@@ -25,7 +24,7 @@ except FileNotFoundError:
   print("version_info.json not found. Using defaults")
   version_info = {}
 
-PACKAGE_SUFFIX = version_info.get("package-suffix") or "-dev"
+PACKAGE_SUFFIX = version_info.get("package-suffix") or ""
 PACKAGE_VERSION = version_info.get("package-version") or "0.1dev1"
 
 
