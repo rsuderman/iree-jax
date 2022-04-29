@@ -5,5 +5,7 @@
     "iree-tools-xla": "20220415.108",
     "jax": "0.3.7",
     "jaxlib": "0.3.7"
-  }
+  },
+  "package-version": "20220429",
+  "package-suffix": ""
 }
